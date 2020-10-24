@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "eyttest-aafae": {
+      "hosting": {
+        "Task": [
+          "eyttest-aafae"
+        ]
+      }
+    }
+  }
+}
