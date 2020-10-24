@@ -8,7 +8,6 @@ import {RouterModule} from '@angular/router';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import { SignupComponent } from './signup/signup.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -27,7 +26,6 @@ export const firebaseConfig = {
     AppComponent,
     LoginComponent,
     HomeComponent,
-    SignupComponent,
   ],
   imports: [
     BrowserModule,
