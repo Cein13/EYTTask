@@ -1,0 +1,25 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(rgb(47,150,163), rgb(48,62,143));
+}
+.form{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+#btn{
+  position: relative;
+  margin-left: 50px;
+}
+#signbtn{
+  margin-left: 50px;
+  color: black;
+
+}
+
