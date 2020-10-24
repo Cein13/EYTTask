@@ -2,9 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { Router } from '@angular/router';
-import { from } from 'rxjs';
-import { switchMap, first, mapTo, take } from 'rxjs/operators';
-import {emailVerified} from '@angular/fire/auth-guard';
+
 
 
 @Component({
@@ -14,7 +12,7 @@ import {emailVerified} from '@angular/fire/auth-guard';
 })
 export class SignupComponent implements OnInit {
   registerForm: FormGroup;
-  constructor(private fb: FormBuilder, private auth: AngularFireAuth) { }
+  constructor(private fb: FormBuilder, private auth: AngularFireAuth, private router: Router) { }
 
   ngOnInit(): void {
     this.registerForm = this.fb.group({
@@ -24,8 +22,9 @@ export class SignupComponent implements OnInit {
   }
   createAccount(): void{
     const {email, password} = this.registerForm.value;
-    this.auth.signInWithEmailAndPassword(email, password).then(user => {
+    this.auth.createUserWithEmailAndPassword(email, password).then(user => {
       console.log('RegisterComponent -> createUser -> user', user);
+      this.router.navigate(['']);
     });
   }
 }
