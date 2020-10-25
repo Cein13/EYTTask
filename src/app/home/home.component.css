@@ -26,13 +26,43 @@
 .card5{
   margin-left: 40%;
 }
-.img{
+#img{
   border-radius: 100%;
-  width: 110px;
-  height: 100px;
+  width: 70px;
+  height: 70px;
+  position: relative;
+  margin-left: 20px;
+  margin-top: 20px;
 }
-.img1{
+#img1{
   border-radius: 100%;
-  width: 100px;
-  height: 100px;
+  width: 70px;
+  height: 70px;
+  position: relative;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+#img2{
+  border-radius: 100%;
+  width: 70px;
+  height: 70px;
+  position: relative;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+#img3{
+  border-radius: 100%;
+  width: 70px;
+  height: 70px;
+  position: relative;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+#img4{
+  border-radius: 100%;
+  width: 70px;
+  height: 70px;
+  position: relative;
+  margin-left: 20px;
+  margin-top: 20px;
 }
