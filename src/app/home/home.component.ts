@@ -29,7 +29,7 @@ export class HomeComponent implements OnInit {
     this.getUsers();
   }
   getUsers(): void{
-    this.httpClient.get<any>('http://localhost:4200/home').subscribe(
+    this.httpClient.get<any>('https://jsonplaceholder.typicode.com/posts').subscribe(
       response => {
         console.log(response);
         this.getUsers = response;
