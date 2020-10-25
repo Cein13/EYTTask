@@ -26,3 +26,13 @@
 .card5{
   margin-left: 40%;
 }
+.img{
+  border-radius: 100%;
+  width: 110px;
+  height: 100px;
+}
+.img1{
+  border-radius: 100%;
+  width: 100px;
+  height: 100px;
+}
