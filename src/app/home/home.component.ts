@@ -8,7 +8,6 @@ import { PostsService } from './posts.service';
 })
 export class HomeComponent implements OnInit {
   data: any;
-
   constructor(private postData: PostsService) { }
 
   ngOnInit(): void {
