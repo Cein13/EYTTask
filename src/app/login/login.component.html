@@ -10,11 +10,11 @@
 <div class="form" [formGroup]="loginForm" >
   <form method="get">
     <label>
-      <input type = "text" formControlName="email" placeholder="Email" class="form-control">
+      <input type = "text" formControlName="email" placeholder="Email" formGroupName="email" class="form-control">
     </label><br>
 
     <label class="mt-1">
-      <input type = "password" formControlName="password" placeholder="Password" class="form-control">
+      <input type = "password" formControlName="password" placeholder="Password" formGroupName="password" class="form-control">
     </label> <br>
     <button class="btn btn-primary mt-2" id="btn" (click)="onLogin()">Log in</button><br>
     <a routerLink="/signup" routerLinkActive="active-link" id="signbtn">Create account</a>

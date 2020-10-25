@@ -1,0 +1,28 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+#header{
+ background-color: #1a85d0;
+  color: white;
+  height: 8vh;
+}
+#hometxt{
+  margin-top: -7px;
+}
+.card1 {
+  margin-left: 40%;
+}
+.card2{
+  margin-left: 40%;
+}
+.card3{
+  margin-left: 40%;
+}
+.card4{
+  margin-left: 40%;
+}
+.card5{
+  margin-left: 40%;
+}

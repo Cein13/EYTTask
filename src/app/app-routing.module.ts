@@ -9,7 +9,7 @@ import { pipe } from 'rxjs';
 import { tap } from 'rxjs/operators';
 
 const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['login']);
-const redirectToHome = redirectLoggedInTo(['']);
+const redirectToHome = redirectLoggedInTo(['home']);
 const redirectToHomeWithLogger = (
   next: ActivatedRouteSnapshot,
   state: RouterStateSnapshot ) => pipe(
