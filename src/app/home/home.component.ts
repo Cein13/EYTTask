@@ -34,7 +34,14 @@ export class HomeComponent implements OnInit {
         console.log(response);
         this.getUsers = response;
       });
-    fetch('https://jsonplaceholder.typicode.com/posts').then(response => response.json())
+    fetch('https://jsonplaceholder.typicode.com/posts').then(response => {
+      if (response.ok){
+        console.log('Successful');
+    }
+      else{
+        console.log('Not Successful');
+      }
+    })
       .then(data => console.log(data));
   }
 }
