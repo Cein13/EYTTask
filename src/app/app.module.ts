@@ -12,6 +12,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { SignupComponent } from './signup/signup.component';
 
+
 export const firebaseConfig = {
   apiKey: 'AIzaSyDFnCog7Zfx71bJTEQmTrBICxWLfviWTU0',
   authDomain: 'react-test-563e6.firebaseapp.com',
@@ -26,8 +27,8 @@ export const firebaseConfig = {
   declarations: [
     AppComponent,
     LoginComponent,
-    HomeComponent,
     SignupComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,

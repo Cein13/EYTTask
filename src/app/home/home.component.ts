@@ -1,5 +1,19 @@
 import { Component, OnInit } from '@angular/core';
-import { PostsService } from './posts.service';
+import {HttpClient} from '@angular/common/http';
+
+export class User {
+  url = 'https://jsonplaceholder.typicode.com/posts';
+  private http: any;
+  constructor(public id: number,
+              public firstname: string,
+              public lastname: string,
+              public email: string,
+              public country: string) {
+  }
+  getPosts(): void{
+    return this.http.get(this.url);
+  }
+}
 
 @Component({
   selector: 'app-home',
@@ -8,13 +22,18 @@ import { PostsService } from './posts.service';
 })
 export class HomeComponent implements OnInit {
   data: any;
-  constructor(private postData: PostsService) { }
+  home: User[];
+  constructor(private httpClient: HttpClient) { }
 
   ngOnInit(): void {
-    this.postData.getPosts().subscribe((result) => {
-      console.log ('result', result);
-      this.data = result;
-    });
+    this.getUsers();
   }
+  getUsers(): void{
+    this.httpClient.get<any>('http://localhost:4200/home').subscribe(
+      response => {
+        console.log(response);
+        this.getUsers = response;
+      });
 
+  }
 }
