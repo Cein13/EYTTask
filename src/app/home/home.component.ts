@@ -23,25 +23,30 @@ export class User {
 export class HomeComponent implements OnInit {
   data: any;
   home: User[];
-  constructor(private httpClient: HttpClient) { }
+
+  constructor(private httpClient: HttpClient) {
+  }
 
   ngOnInit(): void {
     this.getUsers();
   }
-  getUsers(): void{
+
+  getUsers(): void {
     this.httpClient.get<any>('https://jsonplaceholder.typicode.com/posts').subscribe(
       response => {
         console.log(response);
         this.getUsers = response;
       });
-    fetch('https://jsonplaceholder.typicode.com/posts', {method: 'GET'}).then(response => {
-      if (response.ok){
+
+
+    fetch('https://jsonplaceholder.typicode.com/users', {method: 'GET'}).then(response => {
+      if (response.ok) {
         console.log('Successful');
-    }
-      else{
+      } else {
         console.log('Not Successful');
       }
     })
       .then(data => console.log(data));
   }
 }
+
