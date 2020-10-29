@@ -22,7 +22,7 @@ export class SignupComponent implements OnInit {
     });
   }
   createAccount(): void {
-    const { email, password, fullName } = this.registerForm.value;
+    const { email, password } = this.registerForm.value;
     from(this.auth.createUserWithEmailAndPassword(email, password));
   }
 }
